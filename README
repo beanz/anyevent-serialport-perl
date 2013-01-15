@@ -1,0 +1,47 @@
+NAME
+    AnyEvent::SerialPort - AnyEvent::Handle subclass for serial ports
+
+VERSION
+    version 1.130150
+
+SYNOPSIS
+      use AnyEvent;
+      use AnyEvent::SerialPort;
+
+      my $cv = AnyEvent->condvar;
+
+      my $hdl;
+      $hdl = AnyEvent::SerialPort->new(
+               serial_port => '/dev/ttyUSB0',
+               # other AnyEvent::Handle arguments here
+             );
+
+      # or to use something other than 9600 8n1 raw
+      $hdl = AnyEvent::SerialPort->new
+              (
+               serial_port =>
+                 [ '/dev/ttyUSB0',
+                   baudrate => [4800],
+                   # "Device::SerialPort setter name" => \@setter_arguments
+                 ],
+               # other AnyEvent::Handle arguments here
+             );
+
+      # obtain the Device::SerialPort object
+      my $port = $hdl->serial_port;
+
+DESCRIPTION
+    This module is a subclass of AnyEvent::Handle for serial ports.
+
+    IMPORTANT: This is a new API and is still subject to change. Feedback
+    and suggestions would be very welcome.
+
+AUTHOR
+    Mark Hindess <soft-cpan@temporalanomaly.com>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2013 by Mark Hindess.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
