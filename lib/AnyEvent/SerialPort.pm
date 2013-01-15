@@ -86,6 +86,12 @@ sub new {
   $self;
 }
 
+=head2 C<serial_port()>
+
+Return the wrapped L<Device::SerialPort> object.
+
+=cut
+
 sub serial_port {
   shift->{serial_port}
 }
