@@ -54,6 +54,7 @@ sub new {
   $self;
 }
 
+
 sub serial_port {
   shift->{serial_port}
 }
@@ -104,6 +105,10 @@ This module is a subclass of L<AnyEvent::Handle> for serial ports.
 
 B<IMPORTANT:> This is a new API and is still subject to change.  Feedback
 and suggestions would be very welcome.
+
+=head2 C<serial_port()>
+
+Return the wrapped L<Device::SerialPort> object.
 
 =head1 AUTHOR
 

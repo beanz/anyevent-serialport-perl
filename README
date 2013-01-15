@@ -36,6 +36,9 @@ DESCRIPTION
     IMPORTANT: This is a new API and is still subject to change. Feedback
     and suggestions would be very welcome.
 
+  "serial_port()"
+    Return the wrapped Device::SerialPort object.
+
 AUTHOR
     Mark Hindess <soft-cpan@temporalanomaly.com>
 
