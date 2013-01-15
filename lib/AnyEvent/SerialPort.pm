@@ -46,6 +46,9 @@ use Symbol qw(gensym);
 
 This module is a subclass of L<AnyEvent::Handle> for serial ports.
 
+B<IMPORTANT:> This is a new API and is still subject to change.  Feedback
+and suggestions would be very welcome.
+
 =cut
 
 sub new {
