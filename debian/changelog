@@ -1,0 +1,5 @@
+libanyevent-serialport-perl (0.1-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Mark Hindess <soft-debian@temporalanomaly.com>  Tue, 15 Jan 2013 20:42:56 +0000

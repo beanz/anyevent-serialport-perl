@@ -1,0 +1,5 @@
+/AnyEvent-SerialPort-*
+/.build
+*~
+/.tdldb.bak
+/temp
