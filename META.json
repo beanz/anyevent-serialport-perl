@@ -48,6 +48,9 @@
    },
    "release_status" : "stable",
    "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/beanz/anyevent-serialport-perl/issues"
+      },
       "repository" : {
          "type" : "git",
          "url" : "git://github.com/beanz/anyevent-serialport-perl.git",
