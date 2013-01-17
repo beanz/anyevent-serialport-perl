@@ -27,4 +27,4 @@ requires:
 resources:
   bugtracker: https://github.com/beanz/anyevent-serialport-perl/issues
   repository: git://github.com/beanz/anyevent-serialport-perl.git
-version: 1.130170
+version: 1.130172
