@@ -36,6 +36,35 @@ DESCRIPTION
     IMPORTANT: This is a new API and is still subject to change. Feedback
     and suggestions would be very welcome.
 
+METHODS
+  "new(%parameters)"
+    Constructs an AnyEvent::SerialPort object based on the given parameters.
+    The permitted parameters are those of the AnyEvent::Handle super class
+    constructor (except "connect" and "fh" which would not make sense) and a
+    "serial_port" parameter. The value of the serial port parameter may be
+    either:
+
+    *   the full path name of the serial device, or
+
+    *   a list reference containing the full path name of the serial device
+        and zero or more list references each containing a
+        Device::SerialPort method name and arguments to be executed on the
+        wrapped Device::SerialPort object.
+
+    By default, the following setter methods are called on the underlying
+    Device::SerialPort object:
+
+    "baudrate(9600)"
+    databits(8)
+    "parity('none')"
+    stopbits(1)
+    "datatype('raw')"
+
+    The second form of the "serial_port" parameter value described above can
+    be used to override these settings and apply additional setters.
+
+    See the "SYNOPSIS" for examples.
+
   "serial_port()"
     Return the wrapped Device::SerialPort object.
 
