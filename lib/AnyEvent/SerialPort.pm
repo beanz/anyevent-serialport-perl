@@ -103,18 +103,18 @@ version 1.130170
 
 =head1 DESCRIPTION
 
-This module is a subclass of L<AnyEvent::Handle> for serial ports.
+This module is a subclass of AnyEvent::Handle for serial ports.
 
 B<IMPORTANT:> This is a new API and is still subject to change.  Feedback
 and suggestions would be very welcome.
 
 =head1 METHODS
 
-=head2 C<new(%parameters)>
+=head2 new(%parameters)
 
 Constructs an AnyEvent::SerialPort object based on the given
 parameters.  The permitted parameters are those of the
-L<AnyEvent::Handle> super class constructor (except C<connect> and
+AnyEvent::Handle super class constructor (except C<connect> and
 C<fh> which would not make sense) and a C<serial_port> parameter.
 The value of the serial port parameter may be either:
 
@@ -124,25 +124,25 @@ The value of the serial port parameter may be either:
 
 =item * a list reference containing the full path name of the serial
         device and zero or more list references each containing a
-        L<Device::SerialPort> method name and arguments to be executed
-        on the wrapped L<Device::SerialPort> object.
+        Device::SerialPort method name and arguments to be executed
+        on the wrapped Device::SerialPort object.
 
 =back
 
 By default, the following setter methods are called on the underlying
-L<Device::SerialPort> object:
+Device::SerialPort object:
 
 =over
 
-=item C<baudrate(9600)>
+=item baudrate(9600)
 
-=item C<databits(8)>
+=item databits(8)
 
-=item C<parity('none')>
+=item parity('none')
 
-=item C<stopbits(1)>
+=item stopbits(1)
 
-=item C<datatype('raw')>
+=item datatype('raw')
 
 =back
 
@@ -151,9 +151,9 @@ can be used to override these settings and apply additional setters.
 
 See the L</"SYNOPSIS"> for examples.
 
-=head2 C<serial_port()>
+=head2 serial_port()
 
-Return the wrapped L<Device::SerialPort> object.
+Return the wrapped Device::SerialPort object.
 
 =head1 AUTHOR
 

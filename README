@@ -37,7 +37,7 @@ DESCRIPTION
     and suggestions would be very welcome.
 
 METHODS
-  "new(%parameters)"
+  new(%parameters)
     Constructs an AnyEvent::SerialPort object based on the given parameters.
     The permitted parameters are those of the AnyEvent::Handle super class
     constructor (except "connect" and "fh" which would not make sense) and a
@@ -54,18 +54,18 @@ METHODS
     By default, the following setter methods are called on the underlying
     Device::SerialPort object:
 
-    "baudrate(9600)"
+    baudrate(9600)
     databits(8)
-    "parity('none')"
+    parity('none')
     stopbits(1)
-    "datatype('raw')"
+    datatype('raw')
 
     The second form of the "serial_port" parameter value described above can
     be used to override these settings and apply additional setters.
 
     See the "SYNOPSIS" for examples.
 
-  "serial_port()"
+  serial_port()
     Return the wrapped Device::SerialPort object.
 
 AUTHOR
