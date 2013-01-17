@@ -38,6 +38,12 @@
             "strict" : "0",
             "warnings" : "0"
          }
+      },
+      "test" : {
+         "requires" : {
+            "File::Temp" : "0",
+            "Test::More" : "0"
+         }
       }
    },
    "release_status" : "stable",
@@ -48,6 +54,6 @@
          "web" : "https://github.com/beanz/anyevent-serialport-perl"
       }
    },
-   "version" : "1.130150"
+   "version" : "1.130170"
 }
 

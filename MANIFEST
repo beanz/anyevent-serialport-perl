@@ -6,6 +6,14 @@ META.json
 META.yml
 Makefile.PL
 README
+cover_db/cover.12
+cover_db/cover.css
+cover_db/coverage.html
+cover_db/index.html
+cover_db/lib-AnyEvent-SerialPort-pm--branch.html
+cover_db/lib-AnyEvent-SerialPort-pm--subroutine.html
+cover_db/lib-AnyEvent-SerialPort-pm.html
+cover_db/structure/9724bae516a128036baeda479dd1ce94
 debian/changelog
 debian/compat
 debian/control
@@ -14,8 +22,10 @@ debian/rules
 debian/watch
 dist.ini
 lib/AnyEvent/SerialPort.pm
+t/01-simple.t
 t/author-critic.t
 t/author-test-eol.t
+t/lib/Device/SerialPort.pm
 t/release-common_spelling.t
 t/release-kwalitee.t
 t/release-no-tabs.t

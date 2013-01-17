@@ -11,7 +11,10 @@ use ExtUtils::MakeMaker 6.30;
 my %WriteMakefileArgs = (
   "ABSTRACT" => "AnyEvent::Handle subclass for serial ports",
   "AUTHOR" => "Mark Hindess <soft-cpan\@temporalanomaly.com>",
-  "BUILD_REQUIRES" => {},
+  "BUILD_REQUIRES" => {
+    "File::Temp" => 0,
+    "Test::More" => 0
+  },
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.30"
   },
@@ -30,7 +33,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "1.130150",
+  "VERSION" => "1.130170",
   "test" => {
     "TESTS" => "t/*.t"
   }
