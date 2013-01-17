@@ -54,10 +54,10 @@ METHODS
     By default, the following setter methods are called on the underlying
     Device::SerialPort object:
 
-    baudrate(9600)
-    databits(8)
-    parity('none')
-    stopbits(1)
+    baudrate(9600),
+    databits(8),
+    parity('none'),
+    stopbits(1), and
     datatype('raw')
 
     The second form of the "serial_port" parameter value described above can

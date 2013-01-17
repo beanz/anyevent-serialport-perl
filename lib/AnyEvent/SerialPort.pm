@@ -123,9 +123,9 @@ The value of the serial port parameter may be either:
 =item * the full path name of the serial device, or
 
 =item * a list reference containing the full path name of the serial
-        device and zero or more list references each containing a
-        Device::SerialPort method name and arguments to be executed
-        on the wrapped Device::SerialPort object.
+device and zero or more list references each containing a
+Device::SerialPort method name and arguments to be executed on the
+wrapped Device::SerialPort object.
 
 =back
 
@@ -134,13 +134,13 @@ Device::SerialPort object:
 
 =over
 
-=item baudrate(9600)
+=item baudrate(9600),
 
-=item databits(8)
+=item databits(8),
 
-=item parity('none')
+=item parity('none'),
 
-=item stopbits(1)
+=item stopbits(1), and
 
 =item datatype('raw')
 
