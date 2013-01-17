@@ -33,8 +33,8 @@ use Symbol qw(gensym);
           (
            serial_port =>
              [ '/dev/ttyUSB0',
-               baudrate => [4800],
-               # "Device::SerialPort setter name" => \@setter_arguments
+               [ baudrate => 4800 ],
+               # other [ "Device::SerialPort setter name" => \@arguments ] here
              ],
            # other AnyEvent::Handle arguments here
          );
@@ -55,27 +55,29 @@ sub new {
   my $pkg = shift;
   my %p = @_;
   croak "Parameter serial_port is required" unless (exists $p{serial_port});
+
+  # allow just a device name - to use defaults or array reference with
+  # device and settings
   my $dev = delete $p{serial_port};
   my @settings;
-  if (ref $dev && ref $dev eq 'ARRAY') {
-    $dev = shift @$dev;
+  if (ref $dev) {
     @settings = @$dev;
+    $dev = shift @settings;
   }
+
   my $fh = gensym();
   my $s = tie *$fh, 'Device::SerialPort', $dev or
     croak "Could not tie serial port, $dev, to file handle: $!";
-  my %s =
-    (
-     baudrate => 9600,
-     databits => 8,
-     parity => 'none',
-     stopbits => 1,
-     datatype => 'raw',
-     @settings,
-    );
-  foreach my $setter (keys %s) {
-    my $v = $s{$setter};
-    $s->$setter(ref $v ? @$v : $v);
+
+  foreach my $setting ([ baudrate => 9600 ],
+                       [ databits => 8 ],
+                       [ parity => 'none' ],
+                       [ stopbits => 1 ],
+                       [ datatype => 'raw' ],
+                       @settings
+                      ) {
+    my ($setter, @v) = @$setting;
+    $s->$setter(@v);
   }
   $s->write_settings();
   sysopen($fh, $dev, O_RDWR|O_NOCTTY|O_NDELAY) or
