@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package AnyEvent::SerialPort;
 {
-  $AnyEvent::SerialPort::VERSION = '1.130170';
+  $AnyEvent::SerialPort::VERSION = '1.130171';
 }
 
 use base 'AnyEvent::Handle';
@@ -72,7 +72,7 @@ AnyEvent::SerialPort - AnyEvent::Handle subclass for serial ports
 
 =head1 VERSION
 
-version 1.130170
+version 1.130171
 
 =head1 SYNOPSIS
 

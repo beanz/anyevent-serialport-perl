@@ -2,7 +2,7 @@ NAME
     AnyEvent::SerialPort - AnyEvent::Handle subclass for serial ports
 
 VERSION
-    version 1.130170
+    version 1.130171
 
 SYNOPSIS
       use AnyEvent;
