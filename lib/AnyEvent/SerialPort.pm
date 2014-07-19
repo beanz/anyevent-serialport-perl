@@ -1,10 +1,7 @@
 use strict;
 use warnings;
 package AnyEvent::SerialPort;
-{
-  $AnyEvent::SerialPort::VERSION = '1.130171';
-}
-
+$AnyEvent::SerialPort::VERSION = '1.142000';
 use base 'AnyEvent::Handle';
 
 use constant {
@@ -64,7 +61,10 @@ sub serial_port {
 1;
 
 __END__
+
 =pod
+
+=encoding UTF-8
 
 =head1 NAME
 
@@ -72,7 +72,7 @@ AnyEvent::SerialPort - AnyEvent::Handle subclass for serial ports
 
 =head1 VERSION
 
-version 1.130171
+version 1.142000
 
 =head1 SYNOPSIS
 
@@ -167,4 +167,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

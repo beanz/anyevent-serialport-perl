@@ -9,6 +9,6 @@ Homepage: http://search.cpan.org/dist/AnyEvent-SerialPort/
 
 Package: libanyevent-serialport-perl
 Architecture: all
-Depends: ${perl:Depends}, ${misc:Depends}
+Depends: ${perl:Depends}, ${misc:Depends}, libdevice-serialport-perl
 Description: Perl subclass of AnyEvent::Handle to wrap Device::SerialPort
  This package provides an AnyEvent::SerialPort class.

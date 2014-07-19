@@ -1,8 +1,14 @@
+libanyevent-serialport-perl (1.142000-1) unstable; urgency=low
+
+  * Add libdevice-serialport-perl dependency.
+
+ -- Mark Hindess (Debian Packages) <soft-debian@temporalanomaly.com>  Sat, 19 Jul 2014 13:35:22 +0100
+
 libanyevent-serialport-perl (1.130171-1) unstable; urgency=low
 
   * New upstream release.
 
- -- Mark Hindess <soft-debian@temporalanomaly.com>  Thu, 17 Jan 2013 22:48:55 +0000
+ -- Mark Hindess <soft-debian@temporalanomaly.com>  Thu, 17 Jan 2013 22:52:55 +0000
 
 libanyevent-serialport-perl (1.130170-1) unstable; urgency=low
 
