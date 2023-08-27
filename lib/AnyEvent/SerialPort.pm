@@ -9,7 +9,7 @@ use constant {
 };
 
 use Carp qw/croak carp/;
-use Device::SerialPort qw/:PARAM :STAT 0.07/;
+use Device::SerialPort;
 use Fcntl;
 use Symbol qw(gensym);
 
